@@ -11,7 +11,7 @@ image: string ;
 image1: string ;
   constructor() {
     this.image = '../../../assets/images/rectangle.png';
-    this.image1 ='../../../assets/images/rectangle-dot.png';
+    this.image1 = '../../../assets/images/rectangle-dot.png';
    }
 
   ngOnInit(): void {
