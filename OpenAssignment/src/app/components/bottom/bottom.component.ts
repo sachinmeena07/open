@@ -6,22 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bottom.component.scss']
 })
 export class BottomComponent implements OnInit {
-
-image: string ;
-image1: string ;
+  toggle: false;
+  image: string;
+  togolpos: BigInteger;
+  image1: string;
   constructor() {
     this.image = '../../../assets/images/rectangle.png';
     this.image1 = '../../../assets/images/rectangle-dot.png';
-   }
+  }
 
   ngOnInit(): void {
   }
 
-  onMouseHover(){
-    this.image1 = this.image;
+  onMouseHover(togolpos) {
+    document.getElementsByClassName('toggle')[togolpos].setAttribute('src', this.image);
     console.log('image', this.image);
   }
-  onMouseOut(){
-    this.image1= this.image1;
+
+  onMouseOut(togolpos) {
+    document.getElementsByClassName('toggle')[togolpos].setAttribute('src', this.image1);
+    
   }
 }
