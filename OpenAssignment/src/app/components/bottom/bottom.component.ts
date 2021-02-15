@@ -18,10 +18,10 @@ image1: string ;
   }
 
   onMouseHover(){
-    this.image = this.image1;
+    this.image1 = this.image;
     console.log('image', this.image);
   }
   onMouseOut(){
-    this.image = this.image;
+    this.image1= this.image1;
   }
 }
